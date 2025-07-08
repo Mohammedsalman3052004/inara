@@ -105,268 +105,268 @@
     </style>
 
 
-<style>
-    .slider-main-container-ctc {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .slider-track-ctc {
-        display: flex;
-        width: 300%;
-        height: 100%;
-        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .slider-slide-ctc {
-        width: 33.333%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-    }
-
-    .slider-slide-ctc::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.1);
-        pointer-events: none;
-    }
-
-    /* Navigation Arrows */
-    .slider-nav-btn-ctc {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        background: rgba(255, 255, 255, 0.9);
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        z-index: 15;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .slider-nav-btn-ctc:hover {
-        background: rgba(255, 255, 255, 1);
-        transform: translateY(-50%) scale(1.1);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    }
-
-    .slider-nav-btn-ctc:active {
-        transform: translateY(-50%) scale(0.95);
-    }
-
-    .slider-prev-btn-ctc {
-        left: 30px;
-    }
-
-    .slider-next-btn-ctc {
-        right: 30px;
-    }
-
-    .slider-arrow-icon-ctc {
-        width: 16px;
-        height: 16px;
-        border: solid #333;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-    }
-
-    .slider-arrow-left-ctc {
-        transform: rotate(135deg);
-        margin-left: 3px;
-    }
-
-    .slider-arrow-right-ctc {
-        transform: rotate(-45deg);
-        margin-right: 3px;
-    }
-
-    /* Dots Navigation */
-    .slider-dots-wrapper-ctc {
-        position: absolute;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 12px;
-        z-index: 15;
-    }
-
-    .slider-dot-ctc {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.6);
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .slider-dot-ctc:hover {
-        background: rgba(255, 255, 255, 0.8);
-        transform: scale(1.2);
-    }
-
-    .slider-dot-active-ctc {
-        background: rgba(255, 255, 255, 1);
-        transform: scale(1.3);
-        box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-    }
-
-    /* Progress Bar */
-    .slider-progress-ctc {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #007bff, #00d4ff);
-        width: 0%;
-        transition: width 0.1s linear;
-        z-index: 15;
-    }
-
-    /* Desktop Styles */
-    @media (min-width: 1200px) {
-        .slider-nav-btn-ctc {
-            width: 60px;
-            height: 60px;
+    <style>
+        .slider-main-container-ctc {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        .slider-arrow-icon-ctc {
-            width: 18px;
-            height: 18px;
-            border-width: 0 3px 3px 0;
+        .slider-track-ctc {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slider-slide-ctc {
+            width: 33.333%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .slider-slide-ctc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+        }
+
+        /* Navigation Arrows */
+        .slider-nav-btn-ctc {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 15;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .slider-nav-btn-ctc:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .slider-nav-btn-ctc:active {
+            transform: translateY(-50%) scale(0.95);
         }
 
         .slider-prev-btn-ctc {
-            left: 40px;
+            left: 30px;
         }
 
         .slider-next-btn-ctc {
-            right: 40px;
-        }
-
-        .slider-dots-wrapper-ctc {
-            bottom: 35px;
-            gap: 15px;
-        }
-
-        .slider-dot-ctc {
-            width: 14px;
-            height: 14px;
-        }
-    }
-
-    /* Tablet Styles */
-    @media (min-width: 768px) and (max-width: 1199px) {
-        .slider-nav-btn-ctc {
-            width: 50px;
-            height: 50px;
+            right: 30px;
         }
 
         .slider-arrow-icon-ctc {
             width: 16px;
             height: 16px;
-        }
-
-        .slider-prev-btn-ctc {
-            left: 25px;
-        }
-
-        .slider-next-btn-ctc {
-            right: 25px;
-        }
-
-        .slider-dots-wrapper-ctc {
-            bottom: 25px;
-            gap: 12px;
-        }
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 767px) {
-        .slider-nav-btn-ctc {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        .slider-arrow-icon-ctc {
-            width: 14px;
-            height: 14px;
+            border: solid #333;
             border-width: 0 2px 2px 0;
+            display: inline-block;
         }
 
-        .slider-prev-btn-ctc {
-            left: 20px;
+        .slider-arrow-left-ctc {
+            transform: rotate(135deg);
+            margin-left: 3px;
         }
 
-        .slider-next-btn-ctc {
-            right: 20px;
+        .slider-arrow-right-ctc {
+            transform: rotate(-45deg);
+            margin-right: 3px;
         }
 
+        /* Dots Navigation */
         .slider-dots-wrapper-ctc {
-            bottom: 20px;
-            gap: 10px;
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 15;
         }
 
         .slider-dot-ctc {
-            width: 10px;
-            height: 10px;
-        }
-    }
-
-    /* Small Mobile Styles */
-    @media (max-width: 480px) {
-        .slider-nav-btn-ctc {
-            width: 40px;
-            height: 40px;
-        }
-
-        .slider-arrow-icon-ctc {
             width: 12px;
             height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .slider-prev-btn-ctc {
-            left: 15px;
+        .slider-dot-ctc:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: scale(1.2);
         }
 
-        .slider-next-btn-ctc {
-            right: 15px;
+        .slider-dot-active-ctc {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.3);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
         }
 
-        .slider-dots-wrapper-ctc {
-            bottom: 15px;
-            gap: 8px;
+        /* Progress Bar */
+        .slider-progress-ctc {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #00d4ff);
+            width: 0%;
+            transition: width 0.1s linear;
+            z-index: 15;
         }
 
-        .slider-dot-ctc {
-            width: 8px;
-            height: 8px;
-        }
-    }
+        /* Desktop Styles */
+        @media (min-width: 1200px) {
+            .slider-nav-btn-ctc {
+                width: 60px;
+                height: 60px;
+            }
 
-    /* Touch Support */
-    @media (max-width: 768px) {
-        .slider-main-container-ctc {
-            touch-action: pan-y;
+            .slider-arrow-icon-ctc {
+                width: 18px;
+                height: 18px;
+                border-width: 0 3px 3px 0;
+            }
+
+            .slider-prev-btn-ctc {
+                left: 40px;
+            }
+
+            .slider-next-btn-ctc {
+                right: 40px;
+            }
+
+            .slider-dots-wrapper-ctc {
+                bottom: 35px;
+                gap: 15px;
+            }
+
+            .slider-dot-ctc {
+                width: 14px;
+                height: 14px;
+            }
         }
-    }
-</style>
+
+        /* Tablet Styles */
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .slider-nav-btn-ctc {
+                width: 50px;
+                height: 50px;
+            }
+
+            .slider-arrow-icon-ctc {
+                width: 16px;
+                height: 16px;
+            }
+
+            .slider-prev-btn-ctc {
+                left: 25px;
+            }
+
+            .slider-next-btn-ctc {
+                right: 25px;
+            }
+
+            .slider-dots-wrapper-ctc {
+                bottom: 25px;
+                gap: 12px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 767px) {
+            .slider-nav-btn-ctc {
+                width: 45px;
+                height: 45px;
+                background: rgba(255, 255, 255, 0.95);
+            }
+
+            .slider-arrow-icon-ctc {
+                width: 14px;
+                height: 14px;
+                border-width: 0 2px 2px 0;
+            }
+
+            .slider-prev-btn-ctc {
+                left: 20px;
+            }
+
+            .slider-next-btn-ctc {
+                right: 20px;
+            }
+
+            .slider-dots-wrapper-ctc {
+                bottom: 20px;
+                gap: 10px;
+            }
+
+            .slider-dot-ctc {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        /* Small Mobile Styles */
+        @media (max-width: 480px) {
+            .slider-nav-btn-ctc {
+                width: 40px;
+                height: 40px;
+            }
+
+            .slider-arrow-icon-ctc {
+                width: 12px;
+                height: 12px;
+            }
+
+            .slider-prev-btn-ctc {
+                left: 15px;
+            }
+
+            .slider-next-btn-ctc {
+                right: 15px;
+            }
+
+            .slider-dots-wrapper-ctc {
+                bottom: 15px;
+                gap: 8px;
+            }
+
+            .slider-dot-ctc {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        /* Touch Support */
+        @media (max-width: 768px) {
+            .slider-main-container-ctc {
+                touch-action: pan-y;
+            }
+        }
+    </style>
 </head>
 
 <body cz-shortcut-listen="true" id="body">
@@ -543,7 +543,7 @@
 
 
 
-        
+
 
 
         <div id="carouselExampleIndicators" class="carousel slide">
@@ -623,7 +623,7 @@
                         <div class="slider-slide-ctc" style="background-image: url('./banner2.png');"></div>
                         <div class="slider-slide-ctc" style="background-image: url('./banner3.jpg');"></div>
                     </div>
-            
+
                     <!-- Navigation Arrows -->
                     <button class="slider-nav-btn-ctc slider-prev-btn-ctc" id="prevBtnCtc">
                         <span class="slider-arrow-icon-ctc slider-arrow-left-ctc"></span>
@@ -631,14 +631,14 @@
                     <button class="slider-nav-btn-ctc slider-next-btn-ctc" id="nextBtnCtc">
                         <span class="slider-arrow-icon-ctc slider-arrow-right-ctc"></span>
                     </button>
-            
+
                     <!-- Dots Navigation -->
                     <div class="slider-dots-wrapper-ctc">
                         <span class="slider-dot-ctc slider-dot-active-ctc" data-slide="0"></span>
                         <span class="slider-dot-ctc" data-slide="1"></span>
                         <span class="slider-dot-ctc" data-slide="2"></span>
                     </div>
-            
+
                     <!-- Progress Bar -->
                     <div class="slider-progress-ctc" id="progressBarCtc"></div>
                 </div>
@@ -671,7 +671,7 @@
                 </section>
 
 
-               
+
 
                 <section class="projects py-4 project-overview ">
 
@@ -831,22 +831,19 @@
                                     </div>
                                     <div class="col-6 py-2 e  col-md-3">
                                         <div class="bord1 py-2 " view-img="images/bellagio/6.png">
-                                            <img src="./suite.svg" alt=""
-                                                class="img-fluid">
+                                            <img src="./suite.svg" alt="" class="img-fluid">
                                             <p class="text-center pb-0">Suite Room </p>
                                         </div>
                                     </div>
                                     <div class="col-6 py-2 e  col-md-3">
                                         <div class="bord1 py-2 " view-img="images/bellagio/6.png">
-                                            <img src="./tennis.svg" alt=""
-                                                class="img-fluid">
+                                            <img src="./tennis.svg" alt="" class="img-fluid">
                                             <p class="text-center pb-0">Tennis Cour</p>
                                         </div>
                                     </div>
                                     <div class="col-6 py-2 e  col-md-3">
                                         <div class="bord1 py-2 " view-img="images/bellagio/6.png">
-                                            <img src="./bicycle.svg" alt=""
-                                                class="img-fluid">
+                                            <img src="./bicycle.svg" alt="" class="img-fluid">
                                             <p class="text-center pb-0">Cycling Track</p>
                                         </div>
                                     </div>
@@ -1216,16 +1213,23 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="footer_social_style2">
-                                            <ul class="g-0 pt-2 footer">
+                                            <ul class="g-0 pt-2 footer footer-icon"
+                                                style="display: flex; gap: 12px; margin-top: 15px;">
+                                                <a href="">
+                                                    <img src="./facebook.png" alt="Facebook" height="30" width="30">
+                                                </a>
+                                                <a href="">
+                                                    <img src="./x.png" alt="x" height="30" width="30">
 
-                                                <li><a href="https://www.houssoprojects.com/anasaa#"><i
-                                                            class="fab fa-facebook dark-text"></i></a> </li>
-                                                <li> <a href="https://www.houssoprojects.com/anasaa#"> <i
-                                                            class="fab fa-twitter"></i></a></li>
-                                                <li> <a href="https://www.houssoprojects.com/anasaa#"><i
-                                                            class="fab fa-instagram"></i></a></li>
-                                                <li> <a href="https://www.houssoprojects.com/anasaa#"><i
-                                                            class="fab fa-linkedin"></i></a></li>
+                                                </a>
+                                                <a href="">
+                                                    <img src="./instagram.png" alt="Instagram" height="30" width="30">
+
+                                                </a>
+                                                <a href="">
+                                                    <img src="./linkedin.png" alt="LinkedIn" height="30" width="30">
+
+                                                </a>
                                             </ul>
                                         </div>
                                     </div>
@@ -1288,7 +1292,7 @@
 
 
             </div>
-            
+
             <script src="./jquery-3.6.0.min.js.download"></script>
             <script src="./bootstrap.bundle.min.js.download"
                 integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -1482,58 +1486,58 @@
                 this.isAutoPlaying = true;
                 this.touchStartX = 0;
                 this.touchEndX = 0;
-                
+
                 this.sliderTrack = document.querySelector('.slider-track-ctc');
                 this.prevBtn = document.getElementById('prevBtnCtc');
                 this.nextBtn = document.getElementById('nextBtnCtc');
                 this.dots = document.querySelectorAll('.slider-dot-ctc');
                 this.progressBar = document.getElementById('progressBarCtc');
-                
+
                 this.init();
             }
-            
+
             init() {
                 this.setupEventListeners();
                 this.startAutoPlay();
             }
-            
+
             setupEventListeners() {
                 // Arrow navigation
                 this.prevBtn.addEventListener('click', () => this.prevSlide());
                 this.nextBtn.addEventListener('click', () => this.nextSlide());
-                
+
                 // Dot navigation
                 this.dots.forEach((dot, index) => {
                     dot.addEventListener('click', () => this.goToSlide(index));
                 });
-                
+
                 // Keyboard navigation
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'ArrowLeft') this.prevSlide();
                     if (e.key === 'ArrowRight') this.nextSlide();
                 });
-                
+
                 // Touch/Swipe support
                 this.sliderTrack.addEventListener('touchstart', (e) => {
                     this.touchStartX = e.touches[0].clientX;
                 });
-                
+
                 this.sliderTrack.addEventListener('touchend', (e) => {
                     this.touchEndX = e.changedTouches[0].clientX;
                     this.handleSwipe();
                 });
-                
+
                 // Pause auto-play on hover (desktop only)
                 if (window.matchMedia('(min-width: 768px)').matches) {
                     document.querySelector('.slider-main-container-ctc').addEventListener('mouseenter', () => {
                         this.pauseAutoPlay();
                     });
-                    
+
                     document.querySelector('.slider-main-container-ctc').addEventListener('mouseleave', () => {
                         this.startAutoPlay();
                     });
                 }
-                
+
                 // Pause auto-play when page not visible
                 document.addEventListener('visibilitychange', () => {
                     if (document.hidden) {
@@ -1543,43 +1547,43 @@
                     }
                 });
             }
-            
+
             goToSlide(index) {
                 this.currentSlide = index;
                 this.updateSlider();
                 this.updateDots();
                 this.resetAutoPlay();
             }
-            
+
             nextSlide() {
                 this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
                 this.updateSlider();
                 this.updateDots();
                 this.resetAutoPlay();
             }
-            
+
             prevSlide() {
                 this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
                 this.updateSlider();
                 this.updateDots();
                 this.resetAutoPlay();
             }
-            
+
             updateSlider() {
                 const translateX = -this.currentSlide * (100 / this.totalSlides);
                 this.sliderTrack.style.transform = `translateX(${translateX}%)`;
             }
-            
+
             updateDots() {
                 this.dots.forEach((dot, index) => {
                     dot.classList.toggle('slider-dot-active-ctc', index === this.currentSlide);
                 });
             }
-            
+
             handleSwipe() {
                 const swipeThreshold = 50;
                 const swipeDistance = this.touchEndX - this.touchStartX;
-                
+
                 if (Math.abs(swipeDistance) > swipeThreshold) {
                     if (swipeDistance > 0) {
                         this.prevSlide();
@@ -1588,48 +1592,48 @@
                     }
                 }
             }
-            
+
             startAutoPlay() {
                 if (!this.isAutoPlaying) return;
-                
+
                 this.autoPlayTimer = setInterval(() => {
                     this.nextSlide();
                 }, this.autoPlayInterval);
-                
+
                 this.startProgressBar();
             }
-            
+
             pauseAutoPlay() {
                 clearInterval(this.autoPlayTimer);
                 clearInterval(this.progressTimer);
                 this.progressBar.style.width = '0%';
             }
-            
+
             resetAutoPlay() {
                 this.pauseAutoPlay();
                 this.startAutoPlay();
             }
-            
+
             startProgressBar() {
                 let progress = 0;
                 const increment = 100 / (this.autoPlayInterval / 50);
-                
+
                 this.progressTimer = setInterval(() => {
                     progress += increment;
                     this.progressBar.style.width = `${progress}%`;
-                    
+
                     if (progress >= 100) {
                         progress = 0;
                     }
                 }, 50);
             }
         }
-        
+
         // Initialize slider when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             new ProfessionalSliderCtc();
         });
-        
+
         // Handle window resize
         window.addEventListener('resize', () => {
             const slider = document.querySelector('.slider-track-ctc');
